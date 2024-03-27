@@ -1,0 +1,23 @@
+{# templates/upload.html #}
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>Upload Image</h1>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <!-- <input type="file" name="file" id="file" class="form-control">
+                        <label for="file">Choose a file</label> -->
+                        <input type="file" class="form-control" placeholder="Choose file location" aria-label="Choose file location" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2">Browse</span>
+                        <br>
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Enter Staff Name"> 
+                    </div>
+                    <button type="submit" class="btn btn-primary">Generate</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

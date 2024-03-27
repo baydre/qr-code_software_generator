@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    padding: 0 16px;
+  }
+  
+  h1 {
+    margin-bottom: 0;
+  }
+  
+  @media all and (min-width: 800px) {
+    article {
+      width: 66%;
+      float: left;
+    }
+    
+    aside {
+      width: 33%;
+      float: right;
+    }
+  }
+  
+  @media all and (min-width: 1600px) {
+    h1 {
+      width: 22.5%;
+      float: left;
+    }
+    
+    article {
+      width: 50%;
+      float: left;
+    }
+    
+    aside {
+      width: 22.5%;
+      float: right;
+    }
+  }
+
+  /* layout styling */
+  .logo {
+    top: 39px;
+    left: 911px;
+    width: 150px;
+    height: 150px;
+  }
