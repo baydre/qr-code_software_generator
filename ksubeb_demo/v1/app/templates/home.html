@@ -1,11 +1,13 @@
 {% extends 'layout.html' %}
 
-{% block css %}{% endblock %}
+{% block css %}
+<link href="{{ url_for('static', filename='css/home.css')}}" rel="stylesheet">
+{% endblock %}
  
 {% block content %}
-    <div class="container">
-        <button>Generate QR Code</button>
-        <button>Login as an Admin</button>
-        <button>Scan QR Code</button>
+{% include 'nav.html' %}
+    <div class="buttons">
+        <button type="button" class="btn1">Generate QR Code</button>
+        <button type="button" class="btn2">Scan QR Code</button>
     </div>
 {% endblock %}

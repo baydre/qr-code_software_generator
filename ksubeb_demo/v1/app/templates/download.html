@@ -1,0 +1,18 @@
+{# template download.html #}
+{% extends 'layout.html' %}
+
+{% block css %}
+<link href="{{ url_for('static', filename='css/download.css')}}" rel="stylesheet">
+{% endblock %}
+ 
+{% block content %}
+{% include 'nav.html' %}
+{% include 'title.html' %}
+{% if name %}
+<div>
+    <img src="{{ url_for('upload.display_qrcode', name=qr_code.staffname) }}" alt="QR-Code">
+</div> 
+{% endif %}
+<br>
+<a href="{{ url_for('uploads.download', name=name) }}" download>Download QR Code</a>
+{% endblock %}
