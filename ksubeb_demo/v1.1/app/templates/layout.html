@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    {% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    {% endblock %}
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <img src="../static/img/kogi logo.svg" alt="">
+        <h1>Kogi State Universal Basic Education Board (KSUBEB) Staff Database</h1>
+        {% block nav %}
+        {# nav-bar template #}
+        {% endblock nav %}
+    </header>
+    {% block content %}
+    {# Templates goes here #}
+    {% endblock %}
+    <footer>
+        <p>&copy;2024 KSUBEB. All rights reserved.</p>
+        <p>Designed by InnofyTeam</p>
+    </footer>
+</body>
+</html>

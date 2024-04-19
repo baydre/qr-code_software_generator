@@ -1,0 +1,46 @@
+@import url('https://db.onlinewebfonts.com/c/e55e9079ee863276569c8a68d776ef04?family=Futura+Md+BT+Medium');
+
+/*  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General css style */
+body {
+    font: 1.5rem "Futura", sans-serif;
+    min-height: 100vh;
+
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+body,
+footer {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: #1e293b;
+  color: whitesmoke;
+}
+
+header {
+  top: 0;
+}
+
+body {
+  flex-grow: 1;
+}
+
+footer {
+  bottom: 0;
+}

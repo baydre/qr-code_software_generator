@@ -1,0 +1,17 @@
+{# templates/upload.html #}
+{% extends 'layout.html' %}
+
+{% block css %}
+<link href="{{ url_for('static', filename='css/upload.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    {% include 'nav.html' %}
+    {% include 'title.html' %}
+    <h3>Upload Image</h3>
+    <form method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <input type="text" name="username" id="username" placeholder="Enter Staff Name">
+        <input type=submit value=Upload>
+    </form>
+{% endblock content %}
