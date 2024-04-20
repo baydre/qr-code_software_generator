@@ -49,7 +49,7 @@ def upload_file():
             # collect and save user data to upload directory
             file_number = request.form['file_number']
             filename = secure_filename(file.filename)
-            id_qr = secure_filename(file_number)
+            id_qr = secure_filename(file_number + '.png')
             file.save(os.path.join(UPLOAD_FOLDER, filename))
 
             # generate QRCode base on user data
@@ -58,32 +58,21 @@ def upload_file():
             qr_img_path = os.path.join(UPLOAD_FOLDER, id_qr)
             qr.png(qr_img_path, scale=8)
 
+            # Read the generated QR code PNG file content
+            with open(qr_img_path, 'rb') as f:
+                qr_img_data = f.read()
+
             # add generated data to QR table in the database
-            qr_code = QRCode(staffname=file_number, filename=filename)
+            qr_code = QRCode(file_number=file_number, qr_img=qr_img_data)
             db.session.add(qr_code)
             db.session.commit()
 
-            return redirect(url_for('uploads.show_qr', name=id_qr))
+            # return redirect(url_for('', file_number=id_qr))
+            return "QRCode generated successfully!"
     
     return render_template('upload.html')
 
 
 # display QRCode function route
-@uploads.route('/uploads/<name>', methods=['GET', 'POST'])
-def show_qr(file_number):
-    # display the QRCode image
-    if request.method == 'POST':
-        image = QRCode.query.filter_by(file_number).first()
-        if not image:
-            return 'QRCode not found'
-        else:
-            return send_file(BytesIO(image.qr_code), attachment_filename=image.file_number, as_attachment=False)
-
-    return render_template('download.html')
-
 
 # download QRCode route
-@uploads.route('/download/<name>')
-def download_image(file_number):
-    image = QRCode.query.get(file_number)
-    return send_file(BytesIO(image.qr_code), attachment_filename=image.file_number, as_attachment=True)

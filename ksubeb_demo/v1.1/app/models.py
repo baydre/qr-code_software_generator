@@ -14,5 +14,5 @@ class User(db.Model):
 
 class QRCode(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    file_number = db.Column(db.Integer, nullable=False)
+    file_number = db.Column(db.String(50), nullable=False)
     qr_img = db.Column(db.LargeBinary, nullable=False)

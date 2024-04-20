@@ -91,12 +91,12 @@ def login():
     auth = request.authorization
 
     if not auth or not auth.username or not auth.password:
-        return make_response(render_template('login.html'), 401, {'WWW-Authenticate': 'Basic realm="Login required!"'})
+        return make_response(render_template('auth.html'), 401, {'WWW-Authenticate': 'Basic realm="Login required!"'})
     
     user = User.query.filter_by(username=auth.username).first()
 
     if not user:
-        return make_response(render_template('login.html'), 401, {'WWW-Authenticate': 'Basic realm="Login required!"'})
+        return make_response(render_template('auth.html'), 401, {'WWW-Authenticate': 'Basic realm="Login required!"'})
     
     if check_password_hash(user.password, auth.password):
         response = make_response(render_template('login_success.html'))
@@ -104,7 +104,7 @@ def login():
         set_access_cookies(response, access_token)
         return response
     
-    return make_response(render_template('login.html'), 401, {'WWW-Authenticate': 'Basic realm="Login required!"'})
+    return make_response(render_template('auth.html'), 401, {'WWW-Authenticate': 'Basic realm="Login required!"'})
 
 # logout route
 @auth.route('/logout')
