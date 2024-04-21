@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    {% block css %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
-    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+ 
     <title>{{ title }}</title>
 </head>
 <body>
     <header>
-        <img src="../static/img/kogi logo.svg" alt="">
-        <h1>Kogi State Universal Basic Education Board (KSUBEB) Staff Database</h1>
-        {% block nav %}
-        {# nav-bar template #}
-        {% endblock nav %}
+        <img src="../static/img/kogi logo.svg" alt="" class="logo">
+        <div>
+            <h1>Kogi State Universal Basic Education <br>Board (KSUBEB) Staff Database</h1>
+        </div>
     </header>
     {% block content %}
     {# Templates goes here #}
     {% endblock %}
     <footer>
-        <p>&copy;2024 KSUBEB. All rights reserved.</p>
-        <p>Designed by InnofyTeam</p>
+        <p class="copyright">&copy;2024 <strong><span>KSUBEB</span></strong>. All rights reserved</p>
+        <p class="credits">Designed by InnofyTeam</p>
     </footer>
 </body>
 </html>

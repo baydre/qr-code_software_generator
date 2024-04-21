@@ -1,5 +1,11 @@
-/* .buttons button[type="button"]{
-  margin-left: 718px;
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 105px;
+}
+
+.buttons button[type="button"]{
   width: 536px;
   height: 80px;
   font-size: 28px;
@@ -10,10 +16,9 @@
 }
 
 .btn1 {
-  margin-top: 13px;
   margin-bottom: 32px;
 }
 
 .btn1, .btn2 {
   color: #707070;
-} */
+}

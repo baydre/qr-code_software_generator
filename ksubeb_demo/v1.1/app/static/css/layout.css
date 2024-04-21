@@ -1,46 +1,94 @@
-@import url('https://db.onlinewebfonts.com/c/e55e9079ee863276569c8a68d776ef04?family=Futura+Md+BT+Medium');
-
-/*  */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* General css style */
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+/* Default styles for all screen sizes */
 body {
-    font: 1.5rem "Futura", sans-serif;
-    min-height: 100vh;
-
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  opacity: 1;
 }
 
-header,
-body,
+header, 
 footer {
-  display: grid;
-  place-content: center;
-  grid-template-columns: 100%;
+  margin: 0 auto;
   text-align: center;
 }
 
-header,
-footer {
-  position: sticky;
-  background-color: #1e293b;
-  color: whitesmoke;
-}
-
 header {
-  top: 0;
-}
-
-body {
-  flex-grow: 1;
+  width: fit-content;
 }
 
 footer {
   bottom: 0;
+  font-family: Futura Md BT;
+  font-size: 25px;
+  font-style: normal;
+  line-height: 2px;
+  color: #000000;
+}
+
+h1 {
+  /* width: 638px;
+  height: 68px; */
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Futura Md BT Bold;
+  font-size: 34px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0px;
+  color: #707070;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-top: 51px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  text-decoration: none;
+  align-self: center;
+  font-family: Futura Md BT;
+  font-size: 28px;
+}
+
+.title-2 {
+  text-align: center;
+  font-family: Reina Neue;
+  font-size: 64px;
+  font-weight: normal;
+  color: #707070;
+}
+
+/* Styles for screens with a maximum width of 768px (e.g., tablets) */
+@media (max-width: 768px) {
+  body {
+      background-color: green;
+  }
+}
+
+/* Styles for screens with a maximum width of 576px (e.g., smartphones) */
+@media (max-width: 576px) {
+  body {
+      background-color: red;
+  }
 }
