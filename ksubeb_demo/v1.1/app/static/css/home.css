@@ -5,9 +5,10 @@
   margin-bottom: 105px;
 }
 
-.buttons button[type="button"]{
+.buttons button[type="button"] {
   width: 536px;
   height: 80px;
+  font-family: Futura Md BT;
   font-size: 28px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #707070;

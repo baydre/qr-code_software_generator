@@ -1,0 +1,62 @@
+.auth {
+    align-self: center;
+}
+
+.auth-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.rem-me {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.adm-lg, .wc, .lg-db {
+    text-align: center;
+}
+
+.adm-lg {
+    margin: auto;
+    font-family: Funtura Md BT;
+    font-size: 49px;
+}
+
+.wc {
+    font-family: Funtura Md BT;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.lg-db {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.auth-info label {
+    font-size: 19px;
+}
+
+.auth-info input[type="email"], input[type="password"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 620px;
+    height: 76px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.btn-login {
+    align-self: center;
+    width: 330px;
+    height: 57px;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    opacity: 1;
+}

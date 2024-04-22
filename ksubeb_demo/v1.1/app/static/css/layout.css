@@ -5,7 +5,7 @@
 }
 
 /* mobile friendly alternative to using background-attachment: fixed */
-body::before {
+/* body::before {
   content: '';
   position: fixed;
   top: 0;
@@ -13,7 +13,7 @@ body::before {
   height: 100%;
   width: 100%;
   background-size: cover;
-}
+} */
 
 /* Default styles for all screen sizes */
 body {
@@ -65,10 +65,30 @@ h1 {
 }
 
 .navbar {
-  text-decoration: none;
   align-self: center;
   font-family: Futura Md BT;
   font-size: 28px;
+  margin-top: 23px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 30px; /* Adjust spacing between items */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #707070; /* Link color */
+}
+
+.navbar a:hover {
+  color: #000000; /* Link color on hover */ 
 }
 
 .title-2 {
@@ -79,6 +99,14 @@ h1 {
   color: #707070;
 }
 
+/* .qrcode {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 268px;
+  height: 268px;
+} */
 /* Styles for screens with a maximum width of 768px (e.g., tablets) */
 @media (max-width: 768px) {
   body {

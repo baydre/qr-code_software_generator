@@ -1,0 +1,27 @@
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.upload-form input[type="text"] {
+  width: 623px;
+  height: 70px; /* 4.375rem*/
+  align-self: center;
+  font-family: Lato;
+  font-size: 39px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.upload-form input[type="submit"] {
+  margin-top: 84px;
+  width: 329px;
+  height: 70px;
+  align-self: center;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;border-radius: 10px;
+  opacity: 1;
+}
