@@ -2,3 +2,8 @@
 instance
 uploads
 old/
+layout.scss
+node_modules/
+package-lock.json
+package.json
+app/static/css/dump
