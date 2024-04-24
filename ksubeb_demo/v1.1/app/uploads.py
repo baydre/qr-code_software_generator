@@ -74,5 +74,9 @@ def upload_file():
 
 
 # display QRCode function route
+@uploads.route('/download', methods=['GET'])
+def download():
+    return render_template('download.html')
 
 # download QRCode route
+# @uploads.route('/download/<file_number>', methods=['GET'])
