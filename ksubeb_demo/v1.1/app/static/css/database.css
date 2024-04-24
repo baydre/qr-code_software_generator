@@ -1,0 +1,91 @@
+.db-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bck-arrow {
+    display: block;
+    position: absolute;
+    top: 67px;
+    left: 140px;
+    width: 33px;
+    height: 33px;
+    background: transparent 0% 0% no-repeat padding-box;
+    /* border: 3px solid #000000; */
+    opacity: 1;
+}
+
+.logo-db {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: relative;
+    margin-top: auto;
+    margin-left: 280px;
+    margin-right: auto;
+}
+
+.hdn {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 450px;
+    text-align: center;
+    color: #000000;
+}
+
+.hdn1 {
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 34px;
+}
+
+.hdn2 {
+    font-size: 36px;
+}
+
+.ui-search {
+    display: block;
+    position: absolute;
+    top: 210px;
+    left: 670px;
+    width: 581px;
+    height: 56px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.ui-icon-input, input[type="text"], input.prompt {
+    /* Layout Properties */
+    padding: 8px;
+    width: 158px;
+    height: 22px;
+    /* UI Properties */
+    text-align: left;
+    font-family: Futura Md BT;
+    font-size: 19px;
+    letter-spacing: 0px;
+    color: #000000;
+    border: 0;
+    opacity: 0.48;
+}
+
+.search-icon {
+    top: 230px;
+    left: 1190px;
+    width: 16px;
+    height: 16px;
+    border: 3px solid #000000;
+    opacity: 0.54;
+}
+
+.ui-basic-table {
+    display: block;
+    position: absolute;
+    /*  */
+}

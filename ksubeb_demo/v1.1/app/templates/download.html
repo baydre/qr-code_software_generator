@@ -1,16 +1,15 @@
 {# template download.html #}
 {% extends 'layout.html' %}
-
-{% block css %}
-<link href="{{ url_for('static', filename='css/download.css')}}" rel="stylesheet">
-{% endblock %}
  
 {% block content %}
 {% include 'nav.html' %}
 {% include 'title.html' %}
-<div>
-    <img src="{{ url_for('') }}" alt="QR-Code">
-</div>
-<br>
-<a href="{{ url_for('') }}" download>Download QR Code</a>
+<form action="" method="get" class="dnld">
+    <div class="frm">
+        <img src="../static/img/sampleQR.svg" alt="QR-Code" class="qrc">
+    </div>
+    <button type="button" class="dnld-btn">
+        <a href="" download>Download</a>
+    </button>
+</form>
 {% endblock %}

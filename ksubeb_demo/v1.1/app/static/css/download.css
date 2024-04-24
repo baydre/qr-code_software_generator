@@ -1,0 +1,32 @@
+.dnld {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .frm {} */
+.qrc {
+    width: 408px;
+    height: 408px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #00000000;
+    opacity: 1;
+}
+
+.dnld-btn {
+    font-family: Lato;
+    font-size: 29px;
+    width: 299px;
+    height: 64px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.dnld-btn a {
+    text-decoration: none;
+    color: #000000;
+}
