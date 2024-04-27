@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/database.css') }}">
 </head>
 
+<body>
 <!-- database Header -->
 <div class="db-header">
     <a href="" class="rtn-lnk">
@@ -33,35 +34,29 @@
 </div>
 
 <!-- database-records -->
-<table class="ui-basic-table">
-    <thead>
-      <tr>
-        <th>S/N</th>
-        <th>Staff ID No</th>
-        <th>Download</th>
-        <th>Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>73659</td>
-        <td>Download</td>
-        <td>Delete</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>37659</td>
-        <td>Download</td>
-        <td>Delete</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>63759</td>
-        <td>Download</td>
-        <td>Delete</td>
-      </tr>
-    </tbody>
-  </table>
-{% block content %}
-{% endblock %}
+<table border="2" class="ui-basic-table">
+  <thead>
+    <th>S/N</th>
+    <th>Staff Number</th>
+    <th>Local Government</th>
+    <th>Download</th>
+    <th>Delete</th>
+    <!-- Add more table headers for other fields as needed -->
+  </thead>
+  {% for entry in entries %}
+  <tr>
+    <td>{{ entry.id }}</td>
+    <td>{{ entry.file_number }}</td>
+    <td>{{ entry.local_govt }}</td>
+    <td>Download</td>
+    <td>Delete</td>
+    <!-- Render other fields for the entry -->
+  </tr>
+  {% endfor %}
+</table>
+
+<footer>
+  <p class="copyright">&copy;2024 <strong><span>KSUBEB</span></strong>. All rights reserved</p>
+  <p class="credits">Designed by InnofyTeam</p>
+</footer>
+</body>

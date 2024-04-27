@@ -1,23 +1,23 @@
 /*  */
 /* upload image title */
-.id-upload {
+/* .id-upload {
   margin: auto;
   margin-bottom: 25px;
   text-align: center;
   font-family: Lato;
   font-size: 62px;
-}
+} */
 /* form css */
-.upload-form {
+/* .upload-form {
   align-self: center;
-}
+} */
 /* file */
-.file-input {
+/* .file-input {
   margin-top: 11px;
   margin-bottom: 84px;
-}
+} */
 
-.file {
+/* .file {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -43,15 +43,15 @@
   border: .075rem solid #ddd;
   border-radius: .25rem;
   box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
-}
+} */
 /* choose file function */
-.file-custom:after {
+/* .file-custom:after {
   content: "Choose file";
   width: 623px;
   height: 70px;
-}
+} */
 /* Browse button */
-.file-custom:before {
+/* .file-custom:before {
   position: absolute;
   top: -.075rem;
   right: -.075rem;
@@ -65,16 +65,16 @@
   color: #555;
   background-color: #eee;
   border: .075rem solid #ddd;
-  border-radius: 0 .25rem .25rem 0;
-}
+  border-radius: 0 .25rem .25rem 0; 
+}*/
 
 /* Focus */
-.file input:focus ~ .file-custom {
+/* .file input:focus ~ .file-custom {
   box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
-}
+} */
 
 /* enter staff number &  select LGA */
-.staff-info {
+/* .staff-info {
   display: flex;
   flex-direction: row;
-}
+} */

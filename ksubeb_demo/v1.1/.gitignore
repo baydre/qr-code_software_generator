@@ -1,3 +1,5 @@
+test.py
+test/
 *__pycache__
 instance
 uploads
@@ -7,3 +9,4 @@ node_modules/
 package-lock.json
 package.json
 app/static/css/dump
+app/templates/view_database.html
