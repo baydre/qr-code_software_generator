@@ -1,0 +1,14 @@
+Flask
+Flask-Cors
+Flask-JWT-Extended
+Flask-SQLAlchemy
+Flask-WTF
+gunicorn
+Jinja2
+pypng
+PyQRCode
+qrcode
+requests
+typing_extensions
+Werkzeug
+WTForms

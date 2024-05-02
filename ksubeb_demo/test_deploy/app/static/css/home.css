@@ -1,0 +1,29 @@
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 105px;
+}
+
+.buttons button[type="submit"] {
+  width: 536px;
+  height: 80px;
+  font-family: Futura Md BT;
+  font-size: 28px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.buttons button:hover {
+  color: #000000; /* Link color on hover */ 
+}
+
+.btn1 {
+  margin-bottom: 32px;
+}
+
+.btn1, .btn2 {
+  color: #707070;
+}

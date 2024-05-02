@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Entries</title>
+</head>
+<body>
+    <h1>View Entries</h1>
+    <table border="1" class="">
+        <thead>
+            <th>S/N</th>
+            <th>Staff Number</th>
+            <th>Local Government</th>
+            <th>Download</th>
+            <th>Delete</th>
+            <!-- Add more table headers for other fields as needed -->
+        </thead>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.id }}</td>
+            <td>{{ entry.file_number }}</td>
+            <td>{{ entry.local_govt }}</td>
+            <td>Download</td>
+            <td>Delete</td>
+            <!-- Render other fields for the entry -->
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

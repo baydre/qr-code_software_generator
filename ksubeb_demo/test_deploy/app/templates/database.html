@@ -1,0 +1,70 @@
+{# template database.html #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/database.css') }}">
+</head>
+
+<body>
+<!-- database Header -->
+<div class="db-header">
+    <a href="{{ url_for('views.home') }}" class="rtn-lnk">
+        <img src="../static/img/icon-arr-up-right.svg" alt="" class="bck-arrow">
+    </a>
+    
+    <img src="../static/img/kogi-logo.svg" alt="" class="logo-db">
+    
+    <div class="hdn">
+        <h1 class="hdn1">Kogi State Universal Basic Education Board (KSUBEB) Staff Database</h1>
+        <h1 class="hdn2">Manage all staff ID</h1>
+    </div>
+</div>
+
+<!-- search-bar -->
+  <form method="post" action="{{ url_for('views.search')}}" class="ui-search">
+    <input type="text" name="search" placeholder="Enter Staff ID NO." class="search-input">
+  </form>
+
+<!-- database-records -->
+<table class="ui-basic-table">
+  <thead>
+    <th class="serial">S/N</th>
+    <th class="number">Staff Number</th>
+    <th class="lga">LGA</th>
+    <th>
+      <form action="" method="get">
+        <img src="../static/img/download.png" alt="download" class="dnld">
+      </form>
+    </th>
+    <th>
+      <form action="" method="delete">
+        <img src="../static/img/delete.png" alt="delete" class="dlt">
+      </form>
+    </th>
+    <!-- Add more table headers for other fields as needed -->
+  </thead>
+  {% for entry in entries %}
+  <tr>
+    <td>{{ entry.id }}</td>
+    <td>{{ entry.file_number }}</td>
+    <td>{{ entry.local_govt }}</td>
+    <td><input type="checkbox" name="" id=""></td>
+    <td><input type="checkbox" name="" id=""></td>
+    <!-- Render other fields for the entry -->
+  </tr>
+  {% endfor %}
+</table>
+
+<!-- javscript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../static/js/app.js"></script>
+
+</body>
+<footer>
+  <p class="copyright">&copy;2024 <strong><span>KSUBEB</span></strong>. All rights reserved</p>
+  <p class="credits">Designed by InnofyTeam</p>
+</footer>
