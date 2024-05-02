@@ -34,12 +34,18 @@ header {
 }
 
 footer {
-  bottom: 0;
+  position: fixed;
+  margin-bottom: 27px;
+  align-self: center;
   font-family: Futura Md BT;
   font-size: 25px;
   font-style: normal;
   line-height: 2px;
   color: #000000;
+}
+
+footer p {
+  padding: 3px;
 }
 
 h1 {

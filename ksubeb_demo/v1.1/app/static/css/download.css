@@ -9,10 +9,13 @@
 .qrc {
     width: 408px;
     height: 408px;
-    /* UI Properties */
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #00000000;
     opacity: 1;
+}
+
+.dnld-frm {
+    padding-bottom: 80px;
 }
 
 .dnld-btn {
