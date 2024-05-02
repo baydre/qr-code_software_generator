@@ -3,7 +3,9 @@
 {% include 'nav.html' %}
 {% include 'title.html' %}
 <div class="buttons">
-    <button type="button" class="btn1">Generate QR Code</button>
-    <button type="button" class="btn2">Scan QR Code</button>
+    <form action="{{ url_for('uploads.upload_file') }}" method="get">
+        <button type="submit" class="btn1">Generate QR Code</button>
+    </form>
+    <button type="submit" class="btn2">Scan QR Code</button>
 </div>
 {% endblock %}

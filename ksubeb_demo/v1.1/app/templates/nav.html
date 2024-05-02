@@ -1,7 +1,7 @@
 <nav class="navbar">
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#db">Database</a></li>
-        <li><a href="#code">Code Generator</a></li>
+        <li><a href="{{ url_for('views.home') }}">Home</a></li>
+        <li><a href="{{ url_for('views.staff_records') }}">Database</a></li>
+        <li><a href="{{ url_for('uploads.upload_file') }}">Code Generator</a></li>
     </ul>
 </nav>

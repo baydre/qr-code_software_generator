@@ -12,7 +12,7 @@
 <body>
 <!-- database Header -->
 <div class="db-header">
-    <a href="" class="rtn-lnk">
+    <a href="{{ url_for('views.home') }}" class="rtn-lnk">
         <img src="../static/img/icon-arr-up-right.svg" alt="" class="bck-arrow">
     </a>
     
@@ -25,22 +25,26 @@
 </div>
 
 <!-- search-bar -->
-<div class="ui-search">
-    <div class="ui-icon-input">
-      <input class="prompt" type="text" placeholder="Enter Staff ID NO.">
-      <i class="search-icon"></i>
-    </div>
-    <div class="results"></div>
-</div>
+  <form method="post" action="{{ url_for('views.search')}}" class="ui-search">
+    <input type="text" name="search" placeholder="Enter Staff ID NO." class="search-input">
+  </form>
 
 <!-- database-records -->
-<table border="2" class="ui-basic-table">
+<table class="ui-basic-table">
   <thead>
-    <th>S/N</th>
-    <th>Staff Number</th>
-    <th>Local Government</th>
-    <th>Download</th>
-    <th>Delete</th>
+    <th class="serial">S/N</th>
+    <th class="number">Staff Number</th>
+    <th class="lga">LGA</th>
+    <th>
+      <form action="" method="get">
+        <img src="../static/img/download.png" alt="download" class="dnld">
+      </form>
+    </th>
+    <th>
+      <form action="" method="delete">
+        <img src="../static/img/delete.png" alt="delete" class="dlt">
+      </form>
+    </th>
     <!-- Add more table headers for other fields as needed -->
   </thead>
   {% for entry in entries %}
@@ -48,15 +52,19 @@
     <td>{{ entry.id }}</td>
     <td>{{ entry.file_number }}</td>
     <td>{{ entry.local_govt }}</td>
-    <td>Download</td>
-    <td>Delete</td>
+    <td><input type="checkbox" name="" id=""></td>
+    <td><input type="checkbox" name="" id=""></td>
     <!-- Render other fields for the entry -->
   </tr>
   {% endfor %}
 </table>
 
+<!-- javscript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../static/js/app.js"></script>
+
+</body>
 <footer>
   <p class="copyright">&copy;2024 <strong><span>KSUBEB</span></strong>. All rights reserved</p>
   <p class="credits">Designed by InnofyTeam</p>
 </footer>
-</body>

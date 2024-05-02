@@ -8,7 +8,7 @@
     <div class="frm">
         <img src="{{ url_for('uploads.display', file_number=file_number) }}" alt="QR Code">
     </div>
-    <form action="{{ url_for('uploads.download', file_number=file_number) }}" method="get">
+    <form action="{{ url_for('uploads.download', file_number=file_number) }}" method="get" class="dnld-frm">
         <button type="submit" class="dnld-btn">Download</button>
     </form>
 </div>
