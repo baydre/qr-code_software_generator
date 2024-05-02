@@ -1,55 +1,36 @@
-#!/usr/bin/env python3
-""""""
-from flask import Blueprint, request, jsonify
-from flask_jwt_extended import jwt_required, create_access_token, get_jwt_identity
-from passlib.hash import bcrypt
+from flask import Blueprint, render_template, request, redirect, url_for, session
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from .database import db
 from .models import User
 
+
 auth = Blueprint('auth', __name__, url_prefix='/auth')
 
-
-@auth.route('/register', methods=['POST'])
+@auth.route('/register', methods=['GET', 'POST'])
 def register():
-    data = request.get_json()
-    username = data.get('username')
-    password = data.get('password')
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        user = User(username=username, password=password)
+        db.session.add(user)
+        db.session.commit()
+        return redirect(url_for('auth.login'))
+    return render_template('register.html')
 
-    if not username or not password:
-        return jsonify({"msg": "Username and password are required"}), 400
-
-    existing_user = User.query.filter_by(username=username).first()
-    if existing_user:
-        return jsonify({"msg": "Username already exists"}), 400
-
-    hashed_password = bcrypt.hash(password)
-    new_user = User(username=username, password=hashed_password)
-    db.session.add(new_user)
-    db.session.commit()
-
-    return jsonify({"msg": "User registered successfully"}), 201
-
-@auth.route('/login', methods=['POST'])
+@auth.route('/login', methods=['GET', 'POST'])
 def login():
-    data = request.get_json()
-    username = data.get('username')
-    password = data.get('password')
-    
-    user = User.query.filter_by(username=username, password=password).first()
-    if user:
-        access_token = create_access_token(identity=user.id)
-        return jsonify(access_token=access_token), 200
-    else:
-        return jsonify({"msg": "Invalid username or password"}), 401
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        user = User.query.filter_by(username=username).first()
+        if user and password == user.password:
+            access_token = create_access_token(identity=user.id)
+            session['access_token'] = access_token
+            return redirect(url_for('views.home'))
+        return redirect(url_for('auth.login'))
+    return render_template('auth.html')
 
-@auth.route('/logout', methods=['POST'])
-@jwt_required()
+@auth.route('/logout')
 def logout():
-    # You can handle logout logic here if needed
-    return jsonify({"msg": "Logged out successfully"}), 200
-
-@auth.route('/protected', methods=['GET'])
-@jwt_required()
-def protected():
-    current_user_id = get_jwt_identity()
-    return jsonify(logged_in_as=current_user_id), 200
+    session.pop('access_token', None)
+    return redirect(url_for('login'))
