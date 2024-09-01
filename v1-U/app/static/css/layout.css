@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Default styles for all screen sizes */
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  opacity: 1;
+}
+
+header, 
+footer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  width: fit-content;
+}
+
+footer {
+  position: relative;
+  font-family: Futura Md BT;
+  line-height: 0.5rem;
+  color: #FFFFFF;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer p {
+  padding: 3px;
+}
+
+.ksubeb-title p {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Futura Md BT Bold;
+  font-size: 34px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0px;
+  color: #707070;
+}
+
+.logo {
+  padding-bottom: 1rem;
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-top: 51px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  align-self: center;
+  font-family: Futura Md BT;
+  font-size: 28px;
+  margin-top: 0.5rem;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 30px; /* Adjust spacing between items */
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #707070; /* Link color */
+}
+
+.navbar a:hover {
+  color: #000000; /* Link color on hover */ 
+}
+
+.title-2 {
+  text-align: center;
+  font-family: Reina Neue;
+  font-size: 64px;
+  font-weight: normal;
+  color: #707070;
+}
+
+.qrcode {
+  position: absolute;
+  right:10rem;
+  top: 50%;
+  width: 268px;
+  height: 268px;
+}
+
+/* Styles for other desktop screens */
+@media (max-width: 1268px) {
+  /* body {
+      background-color: yellow;
+  } */
+
+  .qrcode {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* body {
+      background-color: blue;
+  } */
+
+  .qrcode {
+    display: none;
+  }
+}
+
+/* Styles for screens with a maximum width of 768px (e.g., tablets) */
+@media (max-width: 768px) {
+  /* body {
+      background-color: green;
+  } */
+
+  .qrcode {
+    display: none;
+  }
+}
+
+/* Styles for screens with a maximum width of 576px (e.g., smartphones) */
+@media (max-width: 576px) {
+  /* body {
+      background-color: red;
+  } */
+
+  .qrcode {
+    display: none;
+  }
+}

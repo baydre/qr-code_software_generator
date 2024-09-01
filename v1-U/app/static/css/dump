@@ -1,0 +1,135 @@
+/* <!-- bootstrap css-min -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!--  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ */
+
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.upload-form input[type="text"] {
+  width: 623px;
+  height: 70px; /* 4.375rem*/
+  align-self: center;
+  font-family: Lato;
+  font-size: 39px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.upload-form input[type="submit"] {
+  margin-top: 84px;
+  width: 329px;
+  height: 70px;
+  align-self: center;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;border-radius: 10px;
+  opacity: 1;
+}
+
+
+/*  */
+
+/* form css */
+/* .upload-form {
+  align-self: center;
+} */
+/* file */
+/* .file-input {
+  margin-top: 11px;
+  margin-bottom: 84px;
+} */
+
+/* .file {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  height: 2.5rem;
+}
+.file input {
+  min-width: 14rem;
+  margin: 0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.file-custom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  height: 2.5rem;
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #fff;
+  border: .075rem solid #ddd;
+  border-radius: .25rem;
+  box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
+} */
+/* choose file function */
+/* .file-custom:after {
+  content: "Choose file";
+  width: 623px;
+  height: 70px;
+} */
+/* Browse button */
+/* .file-custom:before {
+  position: absolute;
+  top: -.075rem;
+  right: -.075rem;
+  bottom: -.075rem;
+  z-index: 6;
+  display: block;
+  content: "Browse";
+  height: 2.5rem;
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #eee;
+  border: .075rem solid #ddd;
+  border-radius: 0 .25rem .25rem 0; 
+}*/
+
+/* Focus */
+/* .file input:focus ~ .file-custom {
+  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
+} */
+
+/* enter staff number &  select LGA */
+/* .staff-info {
+  display: flex;
+  flex-direction: row;
+} */
+
+/* flash card style */
+/* .flash {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.flash-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.flash-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.flash-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+} */

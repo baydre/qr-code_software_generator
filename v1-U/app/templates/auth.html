@@ -1,0 +1,21 @@
+{# templates/auth.html #}
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="auth">
+    <h2 class="adm-lg">Admin login</h2>
+    <p class="wc">Welcome</p>
+    <p class="lg-db">Login to manage staff database</p>
+    <form action="{{ url_for('auth.login') }}" method="post" class="auth-info">
+        <label for="username">Admin ID</label>
+        <input type="text" name="username" id="username" placeholder="Username">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+        <!-- <div class="rem-me">
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Remember me</label>
+        </div> -->
+        <button type="submit" class="btn-login">Login</button>
+    </form>
+</div>
+{% endblock content %}
