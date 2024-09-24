@@ -2,8 +2,6 @@ from flask import Blueprint, render_template, request, redirect, url_for, sessio
 , flash
 from flask_login import login_user, logout_user, LoginManager, login_required\
 , current_user
-from werkzeug.security import generate_password_hash
-from flask_jwt_extended import create_access_token
 from .database import db
 from .models import User
 
@@ -31,10 +29,8 @@ def register():
         elif len(password) < 7:
             flash('Password must be at least 7 characters.', category='danger')
         else:
-        # hash passwords
-            hashed_password = generate_password_hash(password, method='pbkdf2:sha256', salt_length=16)
-        # Create a new user and add them to the database
-            new_user = User(email=email, username=username, password=hashed_password)
+            new_user = User(email=email, username=username)
+            new_user.set_password(password)
             db.session.add(new_user)
             db.session.commit()
             flash('Profile successfully created, Please log in.', category='success')
@@ -56,13 +52,12 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user and user.check_password(password):
             login_user(user)
-            access_token = create_access_token(identity=user.id)
-            session['access_token'] = access_token
             flash('Logged in successfully.', category='success')
             return redirect(url_for('views.home'))
         else:
             flash('Invalid username or password.', category='danger')
-        return redirect(url_for('auth.login'))
+            return redirect(url_for('auth.login'))
+    
     return render_template('auth.html', user=current_user)
 
 @auth.route('/logout')

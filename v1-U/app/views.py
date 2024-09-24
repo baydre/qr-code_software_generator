@@ -70,3 +70,8 @@ def delete_records(id):
         db.session.commit()
         return redirect(url_for('views.staff_records'))
     return render_template('database.html', user=current_user)
+
+# Update Records from database Route
+
+
+# database pagination display

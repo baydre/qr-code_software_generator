@@ -17,18 +17,6 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in current_app.config['ALLOWED_EXTENSIONS']
 
-# Redirect from old path to new path
-@uploads.route('/old-path')
-def old_path():
-    # Perform a 301 redirect to the new URL
-    return redirect("https://drive.google.com/drive/folders/1aZwgBDLonPgMmggfCiq8HKmkFN5BzDKC?usp=drive_link", code=301)
-
-# QR code route to handle 301 redirects for QR code paths
-@uploads.route('/qrcode/<path:subpath>')
-def qrcode_redirect(subpath):
-    new_url = f"https://drive.google.com/drive/folders/1aZwgBDLonPgMmggfCiq8HKmkFN5BzDKC?usp=drive_link/{subpath}"
-    return redirect(new_url, code=301)
-
 # image upload & QRCode generator route
 @uploads.route('/upload', methods=['GET', 'POST'])
 @login_required
