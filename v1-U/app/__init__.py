@@ -10,6 +10,9 @@ from datetime import timedelta
 from .database import db_init
 from .models import User
 
+login_manager = LoginManager()
+login_manager.login_view = 'auth.login'
+
 def create_app():
     """
     Create a Flask application.
@@ -35,7 +38,6 @@ def create_app():
     app.config["UPLOAD_FOLDER"] = os.path.join(os.getcwd(), 'uploads')
     app.config["MAX_FILE_SIZE"] = 1024 * 1024  # 1MB
     
-    login_manager = LoginManager()
     login_manager.init_app(app)
     
     @login_manager.user_loader
