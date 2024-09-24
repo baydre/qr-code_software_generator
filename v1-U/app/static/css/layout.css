@@ -101,6 +101,11 @@ footer p {
 }
 
 /* Styles for other desktop screens */
+@media (max-width: 1377px) {
+  .qrcode {
+    display: none;
+  }
+}
 @media (max-width: 1268px) {
   /* body {
       background-color: yellow;
