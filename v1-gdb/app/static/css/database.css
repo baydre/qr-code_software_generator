@@ -1,0 +1,153 @@
+  main{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  footer {
+    color: #000000;
+    font-size: 25px;
+    font-style: normal;
+    text-align: center;
+    padding: 30px 0;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+    line-height: 0.5rem;
+    
+  }
+
+
+ /* database Header */
+.db-header {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.header-desc{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex: 1;
+    
+}
+
+.bck-arrow {
+    padding: 2rem 0 0 0;
+    width: 33px;
+    height: 33px;
+    background: transparent 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.logo-db {
+    width: 150px;
+    height: 150px;
+}
+
+.hdn {
+    display: block;
+    text-align: center;
+    color: #000000;
+}
+
+.hdn1 {
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.hdn2 {
+    font-size: 1.9rem;
+}
+/* search-bar */
+.ui-search input[type=text] {
+    display: block;
+    padding: 17px;
+    margin: 1rem auto;
+    width: 581px;
+    height: 56px;
+    font-family: Futura Md BT;
+    font-size: 19px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background-image: url('../img/search.svg');
+    background-position: 95%;    
+    border: 1px solid #707070;
+    border-radius: 10px;
+    box-sizing: border-box;
+    opacity: 0.48;
+}
+
+/* database-records */
+.ui-basic-table {
+    position: relative;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+/* .serial, .number,
+.lga {
+    text-align: left;
+}
+
+.dnld, .dlt {
+    text-align: right;
+} */
+
+thead {
+    top: 0px;
+    left: 140px;
+    width: 1640px;
+    height: 42px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+tr {
+    width: 1640px;
+    height: 66px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 6px #00000029;
+    opacity: 1;
+}
+
+tr input[type="checkbox"] {
+    top: 348px;
+    left: 1572px;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #0D3745;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+.lga{
+    min-width: 40%;
+}
+
+@media (max-width: 750px) {
+    .ui-search input[type=text] {
+        width: 95%;
+    }
+    .rtn-lnk {
+        display: none;
+    }
+    .header-desc{
+        flex-direction: column;
+    }
+    .db-header {
+        align-items: center;
+        justify-content: center;
+    }
+    footer {
+        position: relative;
+    }
+    main{
+        width: 95%;
+    }
+}
