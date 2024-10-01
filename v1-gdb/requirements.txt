@@ -1,0 +1,25 @@
+Flask~=3.0.3
+Flask-Cors~=5.0.0
+Flask-JWT-Extended~=4.6.0
+Flask-Login~=0.6.3
+SQLAlchemy~=2.0.35
+Flask-Migrate~=4.0.7
+PyQRCode~=1.2.1
+Werkzeug~=3.0.4
+Flask-SQLAlchemy
+Flask-WTF
+gunicorn
+Jinja2
+pypng
+qrcode
+requests
+typing_extensions
+WTForms
+psycopg2-binary
+python-dotenv
+google-api-python-client
+#---------------------------------------------------
+# flask
+# flask-login
+# flask-cors
+# flask_jwt_extended
